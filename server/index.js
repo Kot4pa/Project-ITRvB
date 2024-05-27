@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import authRoute from "./routes/auth.js";
 import postRoute from "./routes/posts.js";
+import commentRoute from "./routes/comments.js";
 import fileUpload from 'express-fileupload';
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.static('uploads'))
 
 app.use('/api/auth', authRoute);
 app.use('/api/post', postRoute);
+app.use('/api/comments', commentRoute);
 
 async function start(){
     try {
