@@ -68,11 +68,11 @@ export const PostPage = () => {
 
   return (
     <div>
-        <button className='flex justify-center items-center bg-gray-600 text-xs text-white rounded-sm py-2 px-4'>
-            <Link className='flex' to={'/'}>
-                Назад
-            </Link>
-        </button>
+        <Link className='flex' to={'/'}>
+            <button className='flex justify-center items-center bg-gray-600 text-xs text-white rounded-sm py-2 px-4'>
+                    Назад
+            </button>
+        </Link>
 
         <div className='flex gap-10 py-8'>
             <div className='w-2/3'>
@@ -80,7 +80,7 @@ export const PostPage = () => {
                     <div
                         className={
                             post?.imgUrl
-                                ? 'flex rouded-sm h-80'
+                                ? 'flex rouded-sm h-full'
                                 : 'flex rounded-sm'
                         }
                     >
